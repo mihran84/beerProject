@@ -22,7 +22,7 @@ public class BeerContoller {
     }
 
     @GetMapping({"/all"})
-    public ResponseEntity<List<BeerDto>> findBeerAll(@PathVariable UUID beerId){
+    public ResponseEntity<List<BeerDto>> findBeerAll(){
 List<BeerDto> listBeer = beerService.findAll();
         return new ResponseEntity<>(listBeer, HttpStatus.OK) ;
 
